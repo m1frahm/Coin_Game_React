@@ -6,7 +6,7 @@ function CoinImage(props) {
   "https://us.123rf.com/450wm/spideyspike/spideyspike2007/spideyspike200700006/spideyspike200700006.jpg?ver=6";
   if (props.coin === 0) {
     return <img src={headImage}/> // variables must always be in {} 
-      } else {
+      } else if (props.coin === 1) {
         return <img src={tailImage}/>
       }
     }
