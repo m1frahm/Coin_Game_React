@@ -11,7 +11,7 @@ function CoinImage(props) {
       }
     }
 
-    // add to line 9
+
 
 export default CoinImage;
 
