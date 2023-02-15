@@ -65,12 +65,12 @@ export default function App() {
         Click Me To Flip
       </button>
       <button onClick={Reset}>Reset</button>
-      <p> Score Tally</p>
+      <b><p> Score Tally</p></b>
       <p>Head Count = {heads}</p>
       <p>Tail Count= {tails}</p>
-      <b>
+      <h3><b>
         <WinMessage heads={heads} tails={tails} coin={coin} />
-      </b>
+      </b></h3>
       {/* Coin Null <CoinImage coin={null} /> // testing to see what shows on screen
       Coin 0 <CoinImage coin={0} />
       Coin 1 <CoinImage coin={1} />
