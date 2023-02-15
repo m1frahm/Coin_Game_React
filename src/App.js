@@ -28,25 +28,25 @@ import WinMessage from "./components/WinMessage";
 // export default App;
 
 export default function App() {
-
 const [heads, headScore] = useState(0);
 const [tails, tailsScore] = useState(0);
-
-const [coin, setCoin] = useState(null);
- 
-// coin is the value
-// setCoin is the function that changes the value of coin
+const [coin, setCoin] = useState(null); // coin is the value // setCoin is the function that changes the value of coin
   function flipCoin() {
     // assign random value where 0 = heads & 1 = tails
     var flip = Math.floor(Math.random() * 2);
     console.log(flip);
-    setCoin(flip) // now the value of coin will be 0 or 1 bc we passed  
+    setCoin(flip) // now the value of coin will be 0 or 1 bc we passed
+    if ((flip) === 0) {
+      return headScore(heads + 1); 
+    } else if ((flip) === 1) {
+      return  tailsScore(tails + 1); 
+    }
   }
- 
+
   return (
     <div className="App">
-    <header>COIN GAME</header>
-    <text>This is a game of give points. Whoever gets five points first, wins!</text>
+    <h1>COIN GAME</h1>
+    <h2>This is a game of five points. Whoever gets five points first, wins!</h2>
     <CoinImage coin={coin} />
       <button onClick={flipCoin}>Click Me To Flip</button>
       <button>Reset</button>
