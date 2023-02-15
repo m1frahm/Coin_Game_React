@@ -8,6 +8,8 @@ function CoinImage(props) {
     return <img src={headImage}/> // variables must always be in {} 
       } else if (props.coin === 1) {
         return <img src={tailImage}/>
+      } else if (props.coin === null) {
+        return 
       }
     }
 
