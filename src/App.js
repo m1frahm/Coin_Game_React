@@ -40,7 +40,9 @@ export default function App() {
 
   function flipCoin() {
     // assign random value where 0 = heads & 1 = tails
-    
+    if (heads === 5 || tails === 5) {
+      return Reset();
+    }
     var flip = Math.floor(Math.random() * 2);
     console.log(flip);
     setCoin(flip); // now the value of coin will be 0 or 1 bc we passed
