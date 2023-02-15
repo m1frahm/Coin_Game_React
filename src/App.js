@@ -43,6 +43,7 @@ const [coin, setCoin] = useState(null);
   return (
     <div className="App">
     <header>COIN GAME</header>
+    <text>This is a game of give points. Whoever gets five points first, wins!</text>
     <CoinImage coin={coin} />
       <button onClick={flipCoin}>Click Me To Flip</button>
       <button>Reset</button>
