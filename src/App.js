@@ -32,7 +32,6 @@ export default function App() {
   const [tails, setTails] = useState(0);
   const [coin, setCoin] = useState(null); // coin is the value associated w H or T coin // setCoin is the function that changes the value of coin
 
-
   function Reset() {
     setTails(0);
     setHeads(0);
@@ -41,6 +40,9 @@ export default function App() {
 
   function flipCoin() {
     // assign random value where 0 = heads & 1 = tails
+    if (heads === 5 || tails === 5) {
+      return Reset();
+    }
     var flip = Math.floor(Math.random() * 2);
     console.log(flip);
     setCoin(flip); // now the value of coin will be 0 or 1 bc we passed
@@ -50,19 +52,18 @@ export default function App() {
       return setTails(tails + 1);
     }
   }
-
-  // function ScoreCount() {
-  //   var headhasWon = (setHeads(heads + 1)) === 5;
-  // }
-
+  
   return (
     <div className="App">
       <h1>COIN GAME</h1>
       <h2>
         This is a game of five points. Whoever gets five points first, wins!
       </h2>
-      <CoinImage coinvalue={coin} />   {/*coin is state variable //coin value is prop name of coin image*/}
-      <button class="buttonclass" onClick={flipCoin}>Click Me To Flip</button>
+      <CoinImage coinvalue={coin} />{" "}
+      {/*coin is state variable //coin value is prop name of coin image*/}
+      <button class="buttonclass" onClick={flipCoin}>
+        Click Me To Flip
+      </button>
       <button onClick={Reset}>Reset</button>
       <p> Score Tally</p>
       <p>Head Count = {heads}</p>
