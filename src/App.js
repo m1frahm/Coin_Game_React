@@ -28,7 +28,10 @@ import WinMessage from "./components/WinMessage";
 // export default App;
 
 export default function App() {
-  
+
+const [heads, headScore] = useState(0);
+const [tails, tailsScore] = useState(0);
+
 const [coin, setCoin] = useState(null);
  
 // coin is the value
